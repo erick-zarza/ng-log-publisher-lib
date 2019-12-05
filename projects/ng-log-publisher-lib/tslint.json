@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ngLogPublisher",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ng-log-publisher",
+      "kebab-case"
+    ]
+  }
+}

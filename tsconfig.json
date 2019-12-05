@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-log-publisher-lib": [
+        "dist/ng-log-publisher-lib"
+      ],
+      "ng-log-publisher-lib/*": [
+        "dist/ng-log-publisher-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
