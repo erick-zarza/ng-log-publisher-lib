@@ -7,14 +7,16 @@ import { NgLogPublisherLibService } from 'ng-log-publisher-lib';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'logger-tester';
+  title = 'test-app';
   public items = [];
   constructor(private ngLog: NgLogPublisherLibService) { }
 
   ngOnInit() {
+
+    // TODO: Run all tests
     this.ngLog.debug("hola debug message");
     this.ngLog.error("hola error message");
-    //this.ngLog.getEntries("weeeey");
+
 
   
   }

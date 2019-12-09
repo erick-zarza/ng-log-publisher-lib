@@ -18,7 +18,7 @@ export class LogToConsole extends LogPublisher{
         
       try {
         //Log to Console
-        console.log(entry.buildLogString());
+        console.info(entry.buildLogString());
         
         // Set return value
         ret = true;

@@ -1,10 +1,10 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-//import { NgLogPublisherLibComponent } from './ng-log-publisher-lib.component';
-import { ContentfulConfigService } from './classes/log-publisher-config';
+import { LogPublisherConfigService } from './services/log-publisher-config.service';
 import { NgLogPublisherLibService } from './ng-log-publisher-lib.service';
-import { LogPublisherConfig } from './interfaces/log-publisher-config';
+import { LogPublisherConfig } from './models/log-publisher-config';
+
 
 
 @NgModule({
@@ -22,7 +22,7 @@ export class NgLogPublisherLibModule {
       providers: [
         NgLogPublisherLibService,
         {
-          provide: ContentfulConfigService,
+          provide: LogPublisherConfigService,
           useValue: config
         }
       ]

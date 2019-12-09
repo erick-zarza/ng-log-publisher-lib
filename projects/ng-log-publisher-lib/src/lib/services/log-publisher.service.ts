@@ -2,21 +2,22 @@ import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
+import { LogPublisherConfigService } from './log-publisher-config.service';
+import { LogPublisherConfig } from '../models/log-publisher-config';
 import { LogPublisher } from '../classes/log-publisher';
 
-import { LogPublisherConfig } from '../interfaces/log-publisher-config';
 import { LogToLocalStorage } from '../classes/log-to-local-storage';
 import { LogToConsole } from '../classes/log-to-console';
 import { LogToApi } from '../classes/log-to-api';
 import { LogToFile } from '../classes/log-to-file';
-import { ContentfulConfigService } from '../classes/log-publisher-config';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class LogPublisherService {
 
-  constructor(private http: HttpClient, @Inject(ContentfulConfigService) private config) {
+  constructor(private http: HttpClient, @Inject(LogPublisherConfigService) private config) {
     console.error("this error test2: ", this.config);
     console.warn("this warn test2: ", this.config);
     console.debug("this debug test2: ", this.config);

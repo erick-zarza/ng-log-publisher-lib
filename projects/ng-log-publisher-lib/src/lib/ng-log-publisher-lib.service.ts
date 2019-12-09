@@ -1,11 +1,10 @@
 import { Injectable, Inject } from '@angular/core';
+
+import { LogPublisherService } from './services/log-publisher.service';
 import { LogLevel } from './models/log-level.enum';
 import { LogEntry } from './classes/log-entry';
 import { LogPublisher } from './classes/log-publisher';
-import { LogPublisherService } from './services/log-publisher.service';
-import { ContentfulConfigService, ContentfulConfig } from './classes/log-publisher-config';
-import { Observable, of } from 'rxjs';
-import { LogPublisherConfig } from './interfaces/log-publisher-config';
+import { LogPublisherConfig } from './models/log-publisher-config';
 
 @Injectable(
   {

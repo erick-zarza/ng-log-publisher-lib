@@ -3,5 +3,3 @@ export interface LogPublisherConfig {
     loggerLocation: string;
     isActive: boolean;
   }
-  
-  
